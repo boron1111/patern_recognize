@@ -1,13 +1,14 @@
 function saveImage(~,~,ax_h)
 
+filename='six.mat'; %filename to save
 try
-    one=load('zeros.mat');
-    one=one.one;
+    char=load(filename); 
+    char=char.char;
 catch
-    one=[];
+    char=[];
 end
 a=getappdata(ax_h,'a');
-one=cat(3,one,a);
-save('one.mat','one');
+char=cat(3,char,a);
+save(filename,'char');
 imshow(ones(100),'parent',ax_h);
 setappdata(ax_h,'a',ones(100));
