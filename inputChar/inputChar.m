@@ -1,6 +1,5 @@
 %input the character, filename is defined in saveImage.m
 
-clear
 a=ones(100);
 imshow(a);
 fi_h=gcf;
